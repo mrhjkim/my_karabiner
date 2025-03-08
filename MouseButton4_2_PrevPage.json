@@ -1,0 +1,71 @@
+{
+	"title": "Mouse 사이드버튼을 뒤로가기로",
+	"rules": [
+		{
+			"description": "사이드버튼을 '뒤로가기'로",
+			"manipulators": [
+				{
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "device_if",
+							"identifiers": [ { "is_pointing_device": true }]
+						},
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+								"com.parallels.desktop",
+								"com.parallels.vm",
+								"com.parallels.desktop.console",
+								"com.parallels.winapp.",
+								"com.microsoft.rdc.macos"							]
+						}
+					],
+					"from": { 
+						"pointing_button": "button4",
+						"modifiers": { "optional": [ "caps_lock" ] }
+					},
+					"to": [
+						{
+							"key_code": "open_bracket",
+							"modifiers": "left_command"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "사이드버튼2를 '앞으로가기'로",
+			"manipulators": [
+				{
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "device_if",
+							"identifiers": [ { "is_pointing_device": true }]
+						},
+						{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+								"com.parallels.desktop",
+								"com.parallels.vm",
+								"com.parallels.desktop.console",
+								"com.parallels.winapp.",
+								"com.microsoft.rdc.macos"							]
+						}
+					],
+					"from": { 
+						"pointing_button": "button5",
+						"modifiers": { "optional": [ "caps_lock" ] }
+					},
+					"to": [
+						{
+							"key_code": "close_bracket",
+							"modifiers": "left_command"
+						}
+					]
+				}
+			]
+		}
+	]
+}

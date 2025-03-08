@@ -1,0 +1,2466 @@
+{
+	"title": "세벌식(390) 폰 미러링",
+	"rules": [
+		{
+			"description": "초성 ㄱ ㄲ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "sebul_tab_k",
+							"value": 1
+						},
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"from": {
+						"key_code": "k"
+					},
+					"to": [
+						{
+							"key_code": "delete_or_backspace"
+						},
+						{
+							"key_code": "r",
+							"modifiers": ["left_shift"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "k"
+					},
+					"parameters": {
+						"basic.to_if_alone_timeout_milliseconds": 300
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "r"
+						},
+						{
+							"set_variable": {
+								"name": "sebul_tab_k",
+								"value": 1
+							}
+						}
+					],
+					"to_delayed_action": {
+						"to_if_invoked": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_k",
+									"value": 0
+								}
+							}
+						],
+						"to_if_canceled": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_k",
+									"value": 0
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"description": "초성 ㄴ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "h"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "s"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㄷ ㄸ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "sebul_tab_u",
+							"value": 1
+						},
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"from": {
+						"key_code": "u"
+					},
+					"to": [
+						{
+							"key_code": "delete_or_backspace"
+						},
+						{
+							"key_code": "e",
+							"modifiers": ["left_shift"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "u"
+					},
+					"parameters": {
+						"basic.to_if_alone_timeout_milliseconds": 300
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "e"
+						},
+						{
+							"set_variable": {
+								"name": "sebul_tab_u",
+								"value": 1
+							}
+						}
+					],
+					"to_delayed_action": {
+						"to_if_invoked": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_u",
+									"value": 0
+								}
+							}
+						],
+						"to_if_canceled": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_u",
+									"value": 0
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"description": "초성 ㄹ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "y"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "f"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㅁ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "i"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "a"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㅂ ㅃ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "sebul_tab_semicolon",
+							"value": 1
+						},
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"from": {
+						"key_code": "semicolon"
+					},
+					"to": [
+						{
+							"key_code": "delete_or_backspace"
+						},
+						{
+							"key_code": "q",
+							"modifiers": ["left_shift"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "semicolon"
+					},
+					"parameters": {
+						"basic.to_if_alone_timeout_milliseconds": 300
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "q"
+						},
+						{
+							"set_variable": {
+								"name": "sebul_tab_semicolon",
+								"value": 1
+							}
+						}
+					],
+					"to_delayed_action": {
+						"to_if_invoked": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_semicolon",
+									"value": 0
+								}
+							}
+						],
+						"to_if_canceled": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_semicolon",
+									"value": 0
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"description": "초성 ㅅ ㅆ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "sebul_tab_n",
+							"value": 1
+						},
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"from": {
+						"key_code": "n"
+					},
+					"to": [
+						{
+							"key_code": "delete_or_backspace"
+						},
+						{
+							"key_code": "t",
+							"modifiers": ["left_shift"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "n"
+					},
+					"parameters": {
+						"basic.to_if_alone_timeout_milliseconds": 300
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "t"
+						},
+						{
+							"set_variable": {
+								"name": "sebul_tab_n",
+								"value": 1
+							}
+						}
+					],
+					"to_delayed_action": {
+						"to_if_invoked": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_n",
+									"value": 0
+								}
+							}
+						],
+						"to_if_canceled": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_n",
+									"value": 0
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"description": "초성 ㅇ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "j"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "d"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㅈ ㅉ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "sebul_tab_l",
+							"value": 1
+						},
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"from": {
+						"key_code": "l"
+					},
+					"to": [
+						{
+							"key_code": "delete_or_backspace"
+						},
+						{
+							"key_code": "w",
+							"modifiers": ["left_shift"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "l"
+					},
+					"parameters": {
+						"basic.to_if_alone_timeout_milliseconds": 300
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "w"
+						},
+						{
+							"set_variable": {
+								"name": "sebul_tab_l",
+								"value": 1
+							}
+						}
+					],
+					"to_delayed_action": {
+						"to_if_invoked": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_l",
+									"value": 0
+								}
+							}
+						],
+						"to_if_canceled": [
+							{
+								"set_variable": {
+									"name": "sebul_tab_l",
+									"value": 0
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"description": "초성 ㅊ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "o"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "c"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㅋ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "0"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "z"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㅌ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "quote"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "x"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㅍ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "p"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "v"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "초성 ㅎ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "m"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "g"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅏ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "f"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "k"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅐ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "r"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "o"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅑ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "6"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "i"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅒ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "r",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "o",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅒ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "r",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "o",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅓ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "t"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "j"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅔ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "c"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "p"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅕ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "e"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "u"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅖ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "7"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "p",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅗ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "v"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "h"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅗ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "slash"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "h"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅛ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "4"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "y"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅜ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "b"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅜ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "9"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "n"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅠ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "5"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "b"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅡ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "g"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "m"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅣ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "d"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "l"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "중성 ㅢ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "8"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "m"
+						},
+						{
+							"key_code": "l"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆨ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "x"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "r"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆩ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "f",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "r",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆫ(from/to 동일) ᆭ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "s",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "s"
+						},
+						{
+							"key_code": "g"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆮ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "a",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "e"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆯ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "w"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "f"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆰ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "d",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "f"
+						},
+						{
+							"key_code": "r"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆱ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "c",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "f"
+						},
+						{
+							"key_code": "a"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆶ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "v",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "f"
+						},
+						{
+							"key_code": "g"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆷ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "z"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "a"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆸ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "3"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "q"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆹ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "x",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "q"
+						},
+						{
+							"key_code": "t"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆺ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "q"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "t"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆻ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "2"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "t",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆼ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "a"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "d"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆽ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "1",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "w"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆾ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "z",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "c"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᆿ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "e",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "z"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᇀ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "w",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "x"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᇁ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "q",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "v"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "종성 ᇂ",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "1"
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "g"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 ;",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "t",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "semicolon"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 <",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "y",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "comma",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 7",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "u",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 8",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "i",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "8"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 9",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "o",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 >",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "p",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "period",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 /",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "g",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "slash"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 '",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "h",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "quote"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 4",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "j",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 5",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "k",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 6",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "l",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "6"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 !",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "b",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "1",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 0",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "n",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "0"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 1",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "m",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 2",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "comma",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "특수기호 3",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "period",
+						"modifiers": {
+							"mandatory": ["shift"]
+						}
+					},
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"com.apple.ScreenContinuity"
+							]
+						},
+						{
+							"type": "input_source_if",
+							"input_sources": [ {
+								"language": "ko"
+							} ]
+						}
+					],
+					"to": [
+						{
+							"key_code": "3"
+						}
+					]
+				}
+			]
+		}
+	]
+}
